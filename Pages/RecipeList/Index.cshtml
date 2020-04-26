@@ -8,7 +8,7 @@
         <h2 class="text-info">Recipe List</h2>
     </div>
     <div class="col-2">
-        <a class="btn btn-info form-control">Add New Recipe</a>
+        <a asp-page="Add" class="btn btn-info form-control">Add New Recipe</a>
     </div>
 
 
@@ -40,7 +40,7 @@
                             </td>
                             <td>
                                 <button class="btn btn-danger btn-sm">Delete</button>
-                                <a class="btn btn-success btn-sm text-white">Edit</a>
+                                <a asp-page="Edit" asp-route-id="@item.ID "class="btn btn-success btn-sm text-white">Edit</a>
                             </td>
                         </tr>
                     }
