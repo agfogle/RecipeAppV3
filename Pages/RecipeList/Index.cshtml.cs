@@ -24,5 +24,21 @@ namespace RecipeAppV3.Pages.RecipeList
             Recipes = await _db.Recipes.ToListAsync();
 
         }
+
+        public async Task<IActionResult> OnPostDelete(int ID)
+        {
+            var Recipe = await _db.Recipes.FindAsync(ID);
+            if (Recipe == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                _db.Recipes.Remove(Recipe);
+                await _db.SaveChangesAsync();
+
+                return RedirectToPage("Index");
+            }
+        }
     }
 }
