@@ -1,8 +1,42 @@
 ﻿@page
 @model RecipeAppV3.Pages.RecipeList.EditModel
-@{
-    ViewData["Title"] = "Edit";
-}
 
-<h1>Edit</h1>
+
+<br />
+<h2 class="text-info"> Edit Recipe</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Recipes.RecipeName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Recipes.RecipeName" class="form-control" />
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Recipes.RecipeInstructions"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Recipes.RecipeInstructions" class="form-control" />
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-4">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+
+        </div>
+    </form>
+</div>
 
