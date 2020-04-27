@@ -21,10 +21,30 @@
 
         <div class="form-group row">
             <div class="col-4">
+                <label asp-for="Recipes.RecipeTime"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Recipes.RecipeTime" class="form-control" />
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Recipes.RecipeIngredients"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Recipes.RecipeIngredients" class="form-control" />
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
                 <label asp-for="Recipes.RecipeInstructions"></label>
             </div>
             <div class="col-6">
-                <input asp-for="Recipes.RecipeInstructions" class="form-control" />
+                <textarea asp-for="Recipes.RecipeInstructions" class="form-control"></textarea>
 
             </div>
         </div>

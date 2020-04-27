@@ -1,0 +1,53 @@
+﻿@page
+@model RecipeAppV3.Pages.RecipeList.ViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<br />
+<h2 class="text-info"> View Recipe</h2>
+<br />
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipes.RecipeName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipes.RecipeName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipes.RecipeIngredients)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipes.RecipeIngredients)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipes.RecipeTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipes.RecipeTime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipes.RecipeInstructions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipes.RecipeInstructions)
+        </dd>
+    </dl>
+</div>
+
+<div class="form-group row">
+    <div class="col-3 offset-4">
+        <a asp-page="Edit" asp-route-id="@Model.Recipes.ID" class="btn btn-primary form-control">Edit</a>
+    </div>
+    <div class="col-3">
+        <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+    </div>
+
+</div>
+@*<div>
+        <a asp-page="./Edit" asp-route-id="@Model.Recipes.ID">Edit</a> |
+        <a asp-page="./Index">Back to List</a>
+    </div>*@
